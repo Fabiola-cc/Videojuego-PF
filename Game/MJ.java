@@ -10,6 +10,7 @@ public class MJ extends Actor
 {
 
     World link; //Guarda el dato para usarlo luego
+    Home h;
     MJ (World w1){
         GreenfootImage imagen = getImage(); //Reduce tres veces el tamaño de la imágen del objeto.
         imagen.scale(imagen.getWidth() /2, imagen.getHeight() /2);
@@ -24,6 +25,7 @@ public class MJ extends Actor
     {
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(this.link);
+            h.add = "otra vez";
         }    
     
     }

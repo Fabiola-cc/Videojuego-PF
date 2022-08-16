@@ -8,17 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ECalma extends World
 {
-
     /**
      * Constructor for objects of class ECalma.
      * 
      */
-    public ECalma()
+    public ECalma(World link)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1); 
-        Calma c = new Calma();
-        addObject (c,500,300);
+        
         Greenfoot.playSound("S2.mp3");
+        
+        Atras b = new Atras(link);
+        addObject (b,942,555);
+    }
+    
+    public void act()
+    {
+        
     }
 }

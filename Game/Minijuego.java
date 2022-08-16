@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Minijuego extends World
 {
-
+    
     /**
      * Constructor for objects of class Minijuego.
      * Recibe como parámetros, el nombre de la mascota y un enlace al mundo anterior.
@@ -18,14 +18,16 @@ public class Minijuego extends World
      * Llama al método randomobj para colocar la comida y obstáculos alrededor del espacio.
      */
     public static int comida = 0;
-    Minijuego(String nombre, World link)
+    
+    Minijuego(String nombre, World link, int food)
     {    
         super(1000, 600, 1); 
         
-        Pet mascota = new Pet(nombre, true, link);
+        Pet mascota = new Pet(nombre, true, link, food);
         addObject (mascota, 110, 300);
         
-        randomobj();
+        randomobj(food);
+        
     }
     
     /**
@@ -40,7 +42,7 @@ public class Minijuego extends World
      * randomobj- llamado por el constructor
      * Crea objetos de rama, roca y comida para el minijuego, colocandolos aleatoriamente en el espacio.
      */
-    public void randomobj()
+    public void randomobj(int food)
     {
         for(int i=0; i<3; i++) { //un rango de tres elementos.
             int x = Greenfoot.getRandomNumber(getWidth()+20); //Posición x aleatoria, evitando que se encuentre en las primeras 20 unidades.
@@ -57,7 +59,7 @@ public class Minijuego extends World
         for(int i=0; i<10; i++) {
             int x = Greenfoot.getRandomNumber(getWidth()+20);
             int y = Greenfoot.getRandomNumber(getHeight());
-            Comida c = new Comida(1);
+            Comida c = new Comida(food);
             addObject(c, x, y);
         }
         

@@ -12,34 +12,15 @@ public class Pet extends Actor {
     String nombre;
     boolean play= false;
     Minijuego MJ;
+    Home h;
     int comida = 0;
     World link;
-    int Select;
     
     Pet(int Select) {
-        switch(Select){
-            case 1: //Gato
-            setImage("1.png");
-            break;
-            case 2: //Perro Corgi
-            setImage("2.png");
-            break;
-            case 3: //Conejo
-            setImage("3.png");
-            break;
-            case 4: //Pollito
-            setImage("4.png");
-            break;
-            case 5: //Perro rottweiler
-            setImage("5.png");
-            break;
-            case 6: //Tortuga
-            setImage("6.png");
-            break;
-        }
+        imagen(Select);
         
         GreenfootImage imagen = getImage();
-        imagen.scale(imagen.getWidth() / 3, imagen.getHeight() / 3);
+        imagen.scale(imagen.getWidth() / 4, imagen.getHeight() / 4);
     }
 
     /**
@@ -47,10 +28,12 @@ public class Pet extends Actor {
      * Al crear un nuevo objeto, guarda cada dato recibido en las variables establecidas en el programa.
      * Además, reduce el tamaño de la imagen del objeto a la mitad.
      */
-    Pet(String nombre, boolean play, World link) {
-
+    Pet(String nombre, boolean play, World link, int Select) {
+        imagen(Select);
+        
         GreenfootImage imagen = getImage();
-        imagen.scale(imagen.getWidth() / 2, imagen.getHeight() / 2);
+        imagen.scale(imagen.getWidth() / 10, imagen.getHeight() / 10);
+        
         this.play = play;
         this.nombre = nombre;
         this.link = link;
@@ -64,7 +47,8 @@ public class Pet extends Actor {
      */
     public void act() {
         if (play == true){
-          mover();  }
+            Greenfoot.setSpeed (50);
+            mover();  }
         golpe();
         recolecta();
         fin();
@@ -105,12 +89,14 @@ public class Pet extends Actor {
             getWorld().removeObject(Rama);
             MJ.comida --;
             comida--;
+            h.comida --;
         }
         Actor Roca = getOneIntersectingObject (Roca.class);
         if (Roca != null){
             getWorld().removeObject(Roca);
             MJ.comida -= 2;
             comida -= 2;
+            h.comida -= 2;
         }
     }
     
@@ -127,6 +113,7 @@ public class Pet extends Actor {
             myWorld.removeObject(Food);
             MJ.comida ++;
             comida++;
+            h.comida++;
         }
     }
     
@@ -139,9 +126,31 @@ public class Pet extends Actor {
         if (getX() == 999){
             getWorld().addObject(new fin(link), 500, 343);
             getWorld().showText ("Comida recolectada: " + comida, 600,300);
+            getWorld().removeObject(this);
         }
     }
     
-
+    public void imagen(int Select){
+        switch(Select){
+            case 1: //Gato
+            setImage("1.png");
+            break;
+            case 2: //Perro Corgi
+            setImage("2.png");
+            break;
+            case 3: //Conejo
+            setImage("3.png");
+            break;
+            case 4: //Pollito
+            setImage("4.png");
+            break;
+            case 5: //Perro rottweiler
+            setImage("5.png");
+            break;
+            case 6: //Tortuga
+            setImage("6.png");
+            break;
+        }
+    }
 }
 

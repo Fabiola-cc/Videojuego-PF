@@ -11,9 +11,11 @@ public class Home extends World
 {
     
     String nombre;
-    Minijuego mj = new Minijuego(nombre, this);
-    ECalma c = new ECalma();
-    Emociones e = new Emociones();
+    static int comida;
+    ECalma c = new ECalma(this);
+    Emociones e = new Emociones(this);
+    int pet;
+    static String add;
     
     /**
      * Constructor para Home.
@@ -21,14 +23,12 @@ public class Home extends World
      * Crea una nueva mascota y nuevos mundos para ir.
      * 
      */
-    public Home()
+    public Home(int pet)
     {    
         super(1000, 600, 1);
-        Pet p1 = new Pet(1);
+        Pet p1 = new Pet(pet);
+        this.pet = pet;
         addObject(p1, 372,494); //Añade una mascota a la pantalla.
-        
-        MJ Play = new MJ(mj);
-        addObject (Play, 946, 49); //Botón para dirigirse al Minijuego.
         
         BEmociones BE = new BEmociones(e);
         addObject (BE, 872, 49);
@@ -45,7 +45,17 @@ public class Home extends World
             String nombre = Greenfoot.ask("¿Qué nombre deseas darle?");
             this.nombre = nombre; //Recibe un dato de nombre para la mascota.
         }
-        showText("Comida: " + mj.comida, 200,50); //Registra el dato de comida recolectada y lo muestra en pantalla.
+        
+        Instrucciones ins = new Instrucciones(new Minijuego(nombre, this, pet));        
+
+        MJ Play = new MJ(ins);
+        while (add != "listo"){
+            addObject (Play, 946, 49); //Botón para dirigirse al Minijuego.
+            add = "listo";
+        }
+        
+        showText("Comida: " + comida, 200,50); //Registra el dato de comida recolectada y lo muestra en pantalla.
         showText(nombre, 200,100); //Muestra el nombre antes guardado en pantalla.
     }
+
 }
