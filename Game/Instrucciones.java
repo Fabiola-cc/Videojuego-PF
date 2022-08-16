@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Wr
+ * Instrucciones del minijuego para dar claridad de lo que ocurre.
  */
 public class Instrucciones extends World
 {
 
     /**
-     * Constructor for objects of class Instrucciones.
+     * Cuenta con un botón que redirige al juego, finalmente.
      * 
      */
 

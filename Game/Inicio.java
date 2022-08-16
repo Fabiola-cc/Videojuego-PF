@@ -12,8 +12,9 @@ public class Inicio extends World {
      * Constructor for objects of class MyWorld.
      * Muestra la imagen principal en el tamaño especificado.
      * 
-     * Coloca un objeto de botón play, para dirigirse al mundo de home.
      * Permite al usuario seleccionar la mascota que desea y registra ese dato
+     * Al seleccionar la mascota se dirige a Home, con las características de
+     * esa mascota.
      */
 
     public Inicio() {

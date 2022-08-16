@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Utilizado para regresar al mundo home, en los espacios de
- * 
+ * calma y emociones.
  * 
  * @author Fabiola Contreras
  * @version no.1

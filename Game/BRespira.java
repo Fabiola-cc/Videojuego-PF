@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Botón para redirigir al usuario al espacio de emociones.
+ * Botón para redirigir al usuario al espacio de calma.
  */
 public class BRespira extends Actor
 {

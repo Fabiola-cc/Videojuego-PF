@@ -2,32 +2,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Objeto de minijuego. Comida a recolectar por la mascota.
- * 
+ * Varía según el tipo de mascota seleccionado.
  * 
  * @author Fabiola Contreras
- * @version no.1
+ * @version no.2
  */
 public class Comida extends Actor
 {
     int Para;
     Comida(int Para){ //La imagen que representa comida, reduce 10 veces su tamaño.
         switch(Para){
-            case 1: //Gato
+            case 1: //Gato - concentrado
             setImage("FC.png");
             break;
-            case 2: //Perro Corgi
+            case 2: //Perro Corgi - concentrado
             setImage("3 (2).png");
             break;
-            case 3: //Conejo
+            case 3: //Conejo - zanahoria
             setImage("FB.png");
             break;
-            case 4: //Pollito
+            case 4: //Pollito - semillas
             setImage("FCH.png");
             break;
-            case 5: //Perro rottweiler
+            case 5: //Perro rottweiler - hueso
             setImage("2 (2).png");
             break;
-            case 6: //Tortuga
+            case 6: //Tortuga - concentrado
             setImage("FT.png");
             break;
         }

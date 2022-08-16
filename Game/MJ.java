@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Se muestra en home. Permite al usuario ir al minijuego creado.
+ * Se muestra en home. Permite al usuario ir a las instrucciones del minijuego creado.
  * 
  * @author Fabiola Contreras
- * @version no.1
+ * @version no.2
  */
 public class MJ extends Actor
 {
@@ -25,7 +25,7 @@ public class MJ extends Actor
     {
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(this.link);
-            h.add = "otra vez";
+            h.add = "otra vez"; //Se crea nuevamente el botón en home para recrear el minijuego varias veces.
         }    
     
     }

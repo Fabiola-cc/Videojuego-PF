@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * El objetivo es recolectar comida y evitar rocas y ramas.
  * 
  * @author Fabiola Contreras
- * @version no.1
+ * @version no.2
  */
 public class Minijuego extends World
 {
@@ -16,6 +16,7 @@ public class Minijuego extends World
      * 
      * Muestra a la mascota a la izquierda y permite su movimiento.
      * Llama al método randomobj para colocar la comida y obstáculos alrededor del espacio.
+     * Varia los elementos de comida y a la mascota según lo elegido por el usuario.
      */
     public static int comida = 0;
     

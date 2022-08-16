@@ -1,9 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BEmociones here.
+ * Botón para redirigir al usuario al espacio de emociones.
  * 
-
  */
 public class BEmociones extends Actor
 {

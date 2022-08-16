@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Utilizado en instrucciones, redirige al mundo seleccionado.
  * 
  * @author Fabiola Contreras
- * @version no.1
+ * @version no.2
  */
 public class Botón extends Actor
 {

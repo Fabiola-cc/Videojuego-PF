@@ -3,9 +3,10 @@ import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * El protagonista del juego, pet
  * Obtiene un nombre y un lugar en el minijuego para mantenerse activo.
+ * Varía según la selección del usuario.
  * 
  * @author Fabiola Contreras
- * @version no.1
+ * @version no.2
  */
 public class Pet extends Actor {
 
@@ -19,6 +20,7 @@ public class Pet extends Actor {
     Pet(int Select) {
         imagen(Select);
         
+        //Reduce su tamaño para ser visible más fácilmente
         GreenfootImage imagen = getImage();
         imagen.scale(imagen.getWidth() / 4, imagen.getHeight() / 4);
     }
@@ -31,8 +33,9 @@ public class Pet extends Actor {
     Pet(String nombre, boolean play, World link, int Select) {
         imagen(Select);
         
+        //Reduce su tamaño para ser visible más fácilmente en el juego
         GreenfootImage imagen = getImage();
-        imagen.scale(imagen.getWidth() / 10, imagen.getHeight() / 10);
+        imagen.scale(imagen.getWidth() / 8, imagen.getHeight() / 8);
         
         this.play = play;
         this.nombre = nombre;

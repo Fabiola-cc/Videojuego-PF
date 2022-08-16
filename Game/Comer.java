@@ -1,10 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Comer here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Botón para alimentar a la mascota. Elimina un elemento de comida al 
+ * hacer click en este.
  */
 public class Comer extends Actor
 {

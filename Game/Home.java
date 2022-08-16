@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Presenta distintas opciones a realizar dentro del juego.
  * 
  * @author Fabiola Contreras
- * @version no.1
+ * @version no.2
  */
 public class Home extends World
 {
@@ -36,12 +36,15 @@ public class Home extends World
         BRespira BR = new BRespira(c);
         addObject (BR, 796, 49);
         
-        Comer c = new Comer();
+        Comer c = new Comer(); //Para que la mascota consuma el alimento recogido.
         addObject (c, 120, 56);
     }
     
     /**
      * Act - Es llamado cada vez que el botón "run o act" es presionado.
+     * Crea un nuevo mundo de juego para seguir recolectando comida, 
+     * cada que se abre este mundo "home".
+     * Ahora antes de ir al minijuego nos redirige a las instrucciones de este.
      */
     public void act(){
         if (nombre == null){
