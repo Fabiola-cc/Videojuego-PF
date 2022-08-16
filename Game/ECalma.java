@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ECalma here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Espacio de calma, el usuario registra un momento 
+ * de calma en el que respira profundamente
+
  */
 public class ECalma extends World
 {

@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BRespira here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Botón para redirigir al usuario al espacio de emociones.
  */
 public class BRespira extends Actor
 {

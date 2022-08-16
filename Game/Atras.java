@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Utilizado en el mundo de inicio, redirige al mundo de home.
+ * Utilizado para regresar al mundo home, en los espacios de
+ * 
  * 
  * @author Fabiola Contreras
  * @version no.1

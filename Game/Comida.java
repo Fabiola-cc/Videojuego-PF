@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Objeto de minijuego. Comida a recolectar por la mascota.
  * 
+ * 
  * @author Fabiola Contreras
  * @version no.1
  */

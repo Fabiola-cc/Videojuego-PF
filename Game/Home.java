@@ -35,6 +35,9 @@ public class Home extends World
         
         BRespira BR = new BRespira(c);
         addObject (BR, 796, 49);
+        
+        Comer c = new Comer();
+        addObject (c, 120, 56);
     }
     
     /**
@@ -55,7 +58,7 @@ public class Home extends World
         }
         
         showText("Comida: " + comida, 200,50); //Registra el dato de comida recolectada y lo muestra en pantalla.
-        showText(nombre, 200,100); //Muestra el nombre antes guardado en pantalla.
+        showText(nombre, 200,90); //Muestra el nombre antes guardado en pantalla.
     }
 
 }
